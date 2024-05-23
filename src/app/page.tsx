@@ -11,12 +11,13 @@ import { Input } from "@/components/ui/input"
 import { getCompletion } from "../../CustomModel/TalkToLLM"
 
 const handleSend = () => {
+  console.log("hello from send button");
   const requestData = {
     model: 'gpt-4o',
     prompt: 'Once upon a time',
     max_tokens: 100,
   };
-  const res = getCompletion();
+  getCompletion();
 };
 
 export default function Component() {
@@ -91,7 +92,8 @@ export default function Component() {
                 />
                 <Button
                   className="rounded-r-lg bg-gray-900 py-2 px-4 text-white hover:bg-gray-800 focus:ring-0 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-400"
-                  type="submit" onClick={handleSend}
+                  type="submit" onClick={() => 
+                    getCompletion()}
                 >
                   Send
                 </Button>
