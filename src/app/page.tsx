@@ -3,9 +3,21 @@
  * @see https://v0.dev/t/RRRfQWSA9Up
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+"use client";
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { getCompletion } from "../../CustomModel/TalkToLLM"
+
+const handleSend = () => {
+  const requestData = {
+    model: 'gpt-4o',
+    prompt: 'Once upon a time',
+    max_tokens: 100,
+  };
+  const res = getCompletion();
+};
 
 export default function Component() {
   return (
@@ -79,7 +91,7 @@ export default function Component() {
                 />
                 <Button
                   className="rounded-r-lg bg-gray-900 py-2 px-4 text-white hover:bg-gray-800 focus:ring-0 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-400"
-                  type="submit"
+                  type="submit" onClick={handleSend}
                 >
                   Send
                 </Button>
