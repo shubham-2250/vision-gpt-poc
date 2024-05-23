@@ -8,17 +8,11 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { getCompletion } from "../../CustomModel/TalkToLLM"
+import { DefiningWorkflow } from "../../CustomModel/TalkToLLM"
 
-const handleSend = () => {
-  console.log("hello from send button");
-  const requestData = {
-    model: 'gpt-4o',
-    prompt: 'Once upon a time',
-    max_tokens: 100,
-  };
-  getCompletion();
-};
+console.log("hello bhai");
+const res =  DefiningWorkflow("what is temperature in Hisar ?");
+console.log(res);
 
 export default function Component() {
   return (
