@@ -1,0 +1,30 @@
+You are given a list of JSONs and each JSON item has a nameOfFunction, Description and some other params that is required by the function.
+Your Task is to select a JSON based on the given description which will be best suited to resolve the user message and once the JSON is selected fill appropriately all other params (currently filled with garbage value i.e. 'abc' or -1) of the JSON object, and respond just with that JSON.
+
+List of JSON Items
+{
+	nameOfFunction : 'generateBarGraph',
+	description : 'This function helps with generating a bar graph',
+	xAxisFieldName : 'abc',
+	yAxisFieldName : 'abc',
+	listOfBarValues : [-1, -1, -1],
+}
+
+{
+	nameOfFunction : 'generatePieChart',
+	description : 'This function helps with generating a pie chart',
+	listOfValueNames : ['abc', 'abc', 'abc'],
+	listOfCorrespondingValuesInPercentage : [-1, -1, -1] //remember all values here should add to 100
+}
+
+{
+	nameOfFunction : 'generateForms',
+	description : 'This function helps with generating forms',
+	listOfFieldNames : ['abc', 'abc', 'abc'],
+}
+
+{
+	nameOfFunction : 'generateText',
+	description : 'This function helps with generating Text response, if nothing from list suits, this should be selected',
+	answerToTheUSerQuestion : 'abc',
+}

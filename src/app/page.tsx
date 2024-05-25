@@ -8,10 +8,12 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { DefiningWorkflow } from "../../CustomModel/TalkToLLM"
+import { Layer1 } from "../../customModel/layer1/TalkToLLM"
 
-console.log("hello bhai");
-const res =  DefiningWorkflow("what is temperature in Hisar ?");
+// const res =  Layer1("make bar graph of temperature vs time at 10 am temperature is 40 celcius, and at 11 am temperature is 50 celcius and at 12 pm temperatur is 47 celcius");
+//  const res =  Layer1("make pie chart of people's dietry preferences 27 percent Veg, 48 percent Non Veg, remaining Vegan");
+  const res =  Layer1("make form with fields as Name Roll number and email id");
+  // const res =  Layer1("What is India's capital ?");
 console.log(res);
 
 export default function Component() {
